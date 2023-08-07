@@ -10,13 +10,17 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId> <!-- something should be here--></groupId>
-    <artifactId> <!-- something should be here--></artifactId>
-    <version> <!-- something should be here--></version>
+
+    <groupId>com.epam.utils</groupId>
+    <artifactId>utils</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
-        <!-- something should be here-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.13.0</version>
+        </dependency>
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -24,4 +28,17 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
